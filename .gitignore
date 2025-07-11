@@ -154,56 +154,43 @@ cython_debug/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be added to the global gitignore or merged into this project gitignore.  For a PyCharm
-#  project, it is recommended to ignore the entire .idea directory.
-.idea/
+#  be added to the global gitignore or merged into this project gitignore.  For a PyChrains
+#  project, uncomment the next line!
+#.idea/
 
-# VS Code
-.vscode/
+# Project-specific ignores
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+config.py
 
-# Streamlit
-.streamlit/
-
-# Machine Learning / Data Science specific
-models/
-*.pkl
-*.joblib
-*.h5
-*.hdf5
-*.model
-*.weights
-
-# Data files
+# Data files (may contain large datasets)
 data/
 *.csv
 *.json
 *.parquet
-*.feather
-datasets/
-raw_data/
-processed_data/
+*.pkl
+*.pickle
 
-# Spotify API credentials and tokens
-.env
-.env.local
-.env.production
-.env.staging
-spotify_credentials.json
-access_token.json
-refresh_token.json
+# Machine learning models (can be large)
+models/
+*.h5
+*.pkl
+*.joblib
+*.model
+*.pt
+*.pth
+*.ckpt
 
-# Audio files
-*.mp3
-*.wav
-*.flac
-*.m4a
-*.ogg
+# Logs
+logs/
+*.log
 
 # Temporary files
-*.tmp
-*.temp
 temp/
 tmp/
+*.tmp
 
 # OS generated files
 .DS_Store
@@ -214,18 +201,21 @@ tmp/
 ehthumbs.db
 Thumbs.db
 
-# Logs
-logs/
-*.log
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
-# Cache directories
-.cache/
-cache/
+# Streamlit
+.streamlit/
 
-# Kivy specific
+# Kivy
 *.kv~
 
-# Backup files
-*.bak
-*.backup
-*~
+# Audio files (if storing temporary audio)
+*.mp3
+*.wav
+*.m4a
+*.ogg
